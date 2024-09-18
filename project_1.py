@@ -92,6 +92,7 @@ def main():
             print("Please enter positive integers. Try again.")
 
     print_final_key = input("Do you want to view each party's key and bases for the last iteration? (y/yes): ")
+    print()
 
     # repeat in a loop of the specified length to get an average resulting key length
     total_matching_indices = 0
@@ -113,6 +114,7 @@ def main():
             bob_key = [received_values[i] for i in same_basis_indices]
             print("Bob's Key: ", bob_key)
 
+    print()
     print("The average key length was: ", total_matching_indices / iterations)
 
 
