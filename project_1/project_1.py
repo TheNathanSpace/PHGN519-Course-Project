@@ -112,7 +112,7 @@ def main():
             print("Bob's full string: ", received_values)
             print("Alice's key: ", alice_key)
             bob_key = [received_values[i] for i in same_basis_indices]
-            print("Bob's Key: ", bob_key)
+            print("Bob's key: ", bob_key)
 
     print()
     print("The average key length was: ", total_matching_indices / iterations)
