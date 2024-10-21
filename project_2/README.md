@@ -21,6 +21,8 @@ Install requirements (Qiskit dependencies) with `pip install -r requirements.txt
 
 Run the Project 2 code with `python project_2.py`.
 
+Output is printed to stdout. Figures are output in the directory as `.png` files.
+
 ## Example Output
 
 First, we see the bases, chosen individually by Alice and Bob. We see which ones match (the matching bases will be used

@@ -1,6 +1,7 @@
 from random import randint
 
 from qiskit import QuantumCircuit
+from qiskit.visualization import plot_histogram
 from qiskit_aer import AerSimulator
 
 # Define bitstring type for convenience
@@ -71,6 +72,12 @@ def measure_bits(circuit: QuantumCircuit, bases: bitstring):
     # Run and get results
     result = simulator.run(circuit).result()
     counts = result.get_counts(circuit)
+
+    # Output plots
+    plot_histogram(data = result.get_counts(circuit), figsize = (12.8, 9.6), filename = "histogram.png",
+                   title = "Frequency by State")
+    circuit.draw(output = 'mpl', filename = "circuit.png")
+
     # Return the measured bits
     return [int(ch) for ch in list(counts.keys())[0]][::-1]
 
