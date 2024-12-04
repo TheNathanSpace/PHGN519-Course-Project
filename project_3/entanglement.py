@@ -75,10 +75,10 @@ def e91_qkd():
                 continue
 
             if bases[0] == bases[1]:
-                print(f"({i}) Alice/Bob bases: {bases[0]} / {bases[1]} (shared bit: {bits[0]})")
+                print(f"[{i}] Alice/Bob bases: {bases[0]} / {bases[1]} (shared bit: {bits[0]})")
                 shared_bits += bits[0]
             else:
-                print(f"({i}) Alice/Bob bases: {bases[0]} / {bases[1]}")
+                print(f"[{i}] Alice/Bob bases: {bases[0]} / {bases[1]}")
         return shared_bits
     except ValueError as ve:
         print(f"Input error: {ve}")
