@@ -59,14 +59,15 @@ def run_single_bit():
 
 
 def e91_qkd():
-    num_qubits = 5
+    num_qubits = int(input("Enter number of qubits to transmit: "))
     shared_bits = ""
     for i in range(num_qubits):
         bases, bits = run_single_bit()
-        print(f"Base: {bases[0]} / {bases[1]}")
         if bases[0] == bases[1]:
-            print(f"Bits: {bits[0]} / {bits[1]} <--")
+            print(f"({i}) Alice/Bob bases: {bases[0]} / {bases[1]} (shared bit: {bits[0]})")
             shared_bits += bits[0]
+        else:
+            print(f"({i}) Alice/Bob bases: {bases[0]} / {bases[1]}")
     return shared_bits
 
 
